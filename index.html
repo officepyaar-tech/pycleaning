@@ -2,871 +2,1628 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="description" content="PAPPU YAAR TECHNICAL CLEANING SERVICES LLC - Premium cleaning & maintenance services. Book cleaning, AC repair, plumbing, and more with staff selection.">
-  <meta name="keywords" content="cleaning services dubai, home maintenance, deep cleaning, sofa cleaning, AC repair, booking system, pycleaners">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="PAPPU YAAR TECHNICAL CLEANING SERVICES LLC - Professional cleaning, pest control, AC repair, plumbing in Dubai. UAE licensed, certified cleaners. Book online now!">
+  <meta name="keywords" content="cleaning services Dubai, pest control Dubai, AC repair Dubai, plumbing Dubai, sofa cleaning, carpet cleaning, window cleaning, PAPPU YAAR TECHNICAL CLEANING SERVICES">
   <meta name="author" content="PAPPU YAAR TECHNICAL CLEANING SERVICES LLC">
-  <title>PAPPU YAAR | Premium Cleaning & Maintenance | pycleaners.com</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="PAPPU YAAR TECHNICAL CLEANING SERVICES LLC Dubai">
+  <meta property="og:description" content="Premium cleaning and technical services in Dubai. Licensed & certified professionals.">
+  <meta property="og:type" content="website">
+  <title>PAPPU YAAR TECHNICAL CLEANING SERVICES LLC | Dubai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
-    body {
-      background: linear-gradient(135deg, #f0f4fc 0%, #e8eef8 100%);
-      scroll-behavior: smooth;
-    }
+
     :root {
-      --primary: #0a5b9e;
-      --primary-dark: #064579;
-      --primary-light: #3a86c8;
-      --accent: #ffb347;
-      --success: #10b981;
+      --primary-blue: #1a73e8;
+      --dark-blue: #0d47a1;
+      --light-blue: #e8f0fe;
+      --accent-blue: #4285f4;
       --white: #ffffff;
-      --shadow-sm: 0 4px 15px rgba(0,0,0,0.05);
-      --shadow-md: 0 10px 30px -5px rgba(0,0,0,0.1);
-      --shadow-lg: 0 25px 40px -12px rgba(0,0,0,0.15);
+      --gray-light: #f8f9fa;
+      --gray: #6c757d;
+      --shadow: 0 10px 40px rgba(26, 115, 232, 0.1);
+      --shadow-hover: 0 20px 50px rgba(26, 115, 232, 0.15);
     }
-    .header {
-      background: rgba(255,255,255,0.98);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-sm);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+
+    body {
+      background: var(--white);
+      color: #2c3e50;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    .nav-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .logo h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary), #1e88e5, #ffb347);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: shimmer 3s infinite;
-    }
-    @keyframes shimmer {
-      0%,100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-    .website-badge {
-      font-size: 0.85rem;
-      background: linear-gradient(135deg, #eef2ff, #e0e8f5);
-      padding: 5px 14px;
-      border-radius: 30px;
-      color: var(--primary);
-      font-weight: 600;
-    }
-    .nav-buttons { display: flex; gap: 1rem; }
-    .contact-btn, .whatsapp-nav {
-      background: linear-gradient(95deg, var(--primary), var(--primary-light));
-      color: white;
-      padding: 0.6rem 1.3rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-    }
-    .contact-btn:hover, .whatsapp-nav:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .whatsapp-nav { background: #25D366; }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #25D366;
-      color: white;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 35px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
-      z-index: 99;
-      transition: all 0.3s;
-      text-decoration: none;
-      animation: pulseGlow 2s infinite;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); transform: scale(1); }
-      70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); transform: scale(1.05); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); transform: scale(1); }
-    }
-    .hero {
-      background: linear-gradient(135deg, rgba(10,91,158,0.1), rgba(255,255,255,0.92)), url('https://images.pexels.com/photos/4107283/pexels-photo-4107283.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-      padding: 4rem 2rem;
-      text-align: center;
-      position: relative;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 100%);
-      z-index: 0;
-    }
-    .hero > * { position: relative; z-index: 1; }
-    .hero h2 { font-size: 2.8rem; color: var(--primary-dark); font-weight: 800; }
-    .certificates {
-      display: flex;
-      justify-content: center;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-      margin: 2.5rem 0 0;
-    }
-    .cert-badge {
-      background: rgba(255,255,255,0.95);
-      padding: 0.7rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      color: var(--primary);
-      transition: all 0.3s;
-    }
-    .cert-badge i { margin-right: 8px; color: var(--accent); }
-    .container { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; }
-    .section-title {
-      font-size: 2rem;
-      margin: 2.5rem 0 1.5rem;
-      border-left: 6px solid var(--primary);
-      padding-left: 1.2rem;
-      font-weight: 700;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .service-category-card {
-      background: white;
-      border-radius: 30px;
-      padding: 2rem;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.4s;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(10,91,158,0.1);
-    }
-    .service-category-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-    }
-    .service-category-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
-    .service-category-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
-    .cart-summary {
-      background: white;
-      border-radius: 30px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .cart-summary h4 { font-size: 1.2rem; color: var(--primary); }
-    .cart-items-count {
-      background: var(--primary);
-      color: white;
-      padding: 5px 15px;
-      border-radius: 30px;
-      font-weight: 600;
-    }
-    .view-cart-btn {
-      background: linear-gradient(95deg, var(--primary), var(--primary-light));
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 40px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .modal {
-      display: none;
+
+    /* Animated Background */
+    .animated-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.7);
+      background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 50%, #e3f2fd 100%);
+      z-index: -1;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Header */
+    .header {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      animation: fadeIn 0.3s;
+      animation: slideDown 0.5s ease;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
     }
-    .modal-content {
-      background: white;
-      border-radius: 40px;
-      max-width: 600px;
-      width: 90%;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 2rem;
-      animation: slideUp 0.3s;
-    }
-    @keyframes slideUp {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .modal-header {
+
+    .header-top {
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 8px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #eef2ff;
-      padding-bottom: 0.8rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
     }
-    .modal-header h3 { font-size: 1.5rem; color: var(--primary); }
-    .close-modal { font-size: 1.8rem; cursor: pointer; color: #666; transition: 0.2s; }
-    .close-modal:hover { color: var(--primary); }
-    .option-item {
-      background: #f8fafc;
-      border-radius: 20px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      border: 2px solid transparent;
+
+    .header-top i {
+      margin-right: 5px;
+      color: #ffd700;
     }
-    .option-item:hover { transform: translateX(5px); background: #eef2ff; }
-    .option-item.selected { border-color: var(--primary); background: #eef2ff; }
-    .option-name { font-weight: 700; font-size: 1.1rem; }
-    .option-price { color: var(--primary); font-weight: 600; }
-    .property-grid-modal {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .property-item {
-      text-align: center;
-      padding: 1rem;
-      background: #f8fafc;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .property-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); }
-    .property-item.selected { border: 2px solid var(--primary); background: #eef2ff; }
-    .property-item img {
-      width: 100%;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 0.5rem;
-    }
-    .modal-buttons {
+
+    .header-main {
+      padding: 15px 5%;
       display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .btn-primary, .btn-secondary {
-      flex: 1;
-      padding: 12px;
-      border-radius: 40px;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .btn-primary { background: var(--primary); color: white; }
-    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
-    .btn-secondary { background: #e2e8f0; color: #333; }
-    .btn-secondary:hover { background: #cbd5e1; }
-    .staff-option {
-      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      padding: 15px;
-      border: 2px solid #e2e8f0;
-      border-radius: 20px;
-      margin-bottom: 15px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .staff-option.selected { border-color: var(--primary); background: #eef2ff; }
-    .staff-icon { font-size: 2rem; }
-    .nationality-select {
-      width: 100%;
-      padding: 12px;
-      border-radius: 30px;
-      border: 1.5px solid #e2e8f0;
-      margin: 10px 0;
-    }
-    .billing-preview {
-      background: linear-gradient(135deg, #f0f7ff, #e8f0fe);
-      border-radius: 20px;
-      padding: 1.2rem;
-      margin: 1rem 0;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .form-group {
-      margin-bottom: 1rem;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: #333;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 30px;
-      border: 1.5px solid #e2e8f0;
-      font-size: 0.95rem;
-      transition: all 0.3s;
-    }
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(10,91,158,0.15);
-    }
-    .payment-options {
-      display: flex;
-      gap: 1.5rem;
-      margin: 1rem 0;
       flex-wrap: wrap;
     }
-    .pay-method {
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .logo-text h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-blue);
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--gray);
+      letter-spacing: 1px;
+    }
+
+    .trust-badge {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .badge-item {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-weight: 500;
+      background: var(--light-blue);
       padding: 8px 16px;
-      background: #f1f5f9;
-      border-radius: 40px;
+      border-radius: 50px;
+    }
+
+    .badge-item i {
+      color: var(--primary-blue);
+      font-size: 1.2rem;
+    }
+
+    /* Navigation */
+    .nav {
+      background: var(--white);
+      padding: 0 5%;
+      border-bottom: 2px solid var(--light-blue);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 5px;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    .nav-links li a {
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-links li a:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-content h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--dark-blue);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .hero-content h2 span {
+      color: var(--primary-blue);
+      position: relative;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: var(--primary-blue);
+      font-weight: 700;
+    }
+
+    .hero-image {
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 60px 5%;
+      background: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--dark-blue);
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+      animation: fadeInUp 0.6s ease backwards;
+    }
+
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+    .service-card:nth-child(5) { animation-delay: 0.5s; }
+    .service-card:nth-child(6) { animation-delay: 0.6s; }
+    .service-card:nth-child(7) { animation-delay: 0.7s; }
+    .service-card:nth-child(8) { animation-delay: 0.8s; }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary-blue);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--light-blue), #d4e4fc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .service-icon i {
+      font-size: 36px;
+      color: var(--primary-blue);
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--dark-blue);
+    }
+
+    .service-price {
+      color: var(--primary-blue);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    /* Certificates Section */
+    .certificates {
+      padding: 60px 5%;
+      background: var(--light-blue);
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .cert-item {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .cert-item:hover {
+      transform: scale(1.05);
+    }
+
+    .cert-item i {
+      font-size: 40px;
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+
+    /* Reviews Section */
+    .reviews {
+      padding: 60px 5%;
+      background: var(--white);
+    }
+
+    .review-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .review-card {
+      background: var(--light-blue);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .review-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+    }
+
+    .stars {
+      color: #ffc107;
+      margin: 10px 0;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-blue);
+      color: var(--white);
+      padding: 50px 5% 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+
+    .footer-section p {
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .footer-section i {
+      margin-right: 10px;
+      color: #ffd700;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: var(--white);
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: var(--primary-blue);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Floating Buttons */
+    .float-wa {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+      z-index: 999;
+      transition: all 0.3s;
+      animation: bounce 2s infinite;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+    .float-call {
+      position: fixed;
+      bottom: 30px;
+      right: 110px;
+      background: var(--primary-blue);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 10px 30px rgba(26, 115, 232, 0.3);
+      z-index: 999;
+      transition: all 0.3s;
+    }
+
+    .float-call:hover {
+      transform: scale(1.1);
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal {
+      background: var(--white);
+      max-width: 500px;
+      width: 90%;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: 25px;
+      padding: 30px;
+      position: relative;
+      animation: modalSlideIn 0.3s ease;
+    }
+
+    @keyframes modalSlideIn {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--gray);
+      transition: color 0.3s;
+    }
+
+    .modal-close:hover {
+      color: var(--primary-blue);
+    }
+
+    .modal h3 {
+      color: var(--dark-blue);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .modal-option {
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid var(--light-blue);
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .modal-option:hover {
+      border-color: var(--primary-blue);
+      background: var(--light-blue);
+    }
+
+    .modal-option.selected {
+      border-color: var(--primary-blue);
+      background: var(--light-blue);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--dark-blue);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid var(--light-blue);
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+    }
+
+    .btn {
+      background: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background: var(--dark-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(26, 115, 232, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary-blue);
+      color: var(--primary-blue);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-blue);
+      color: white;
+    }
+
+    .invoice-preview {
+      background: var(--light-blue);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .invoice-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .invoice-total {
+      border-top: 2px solid var(--primary-blue);
+      padding-top: 15px;
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .staff-selector {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .staff-selector button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--primary-blue);
+      background: white;
+      color: var(--primary-blue);
+      font-size: 20px;
       cursor: pointer;
     }
-    .selected-services-list {
-      background: #f8fafc;
-      border-radius: 20px;
-      padding: 1rem;
-      margin: 1rem 0;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-    .service-tag {
-      background: white;
-      padding: 6px 12px;
-      border-radius: 30px;
-      margin: 4px;
-      display: inline-block;
-      font-size: 0.85rem;
-      box-shadow: var(--shadow-sm);
-    }
-    footer {
-      background: linear-gradient(135deg, #0a2b3e, #052837);
-      color: white;
-      padding: 2rem;
+
+    .staff-selector span {
+      font-size: 1.2rem;
+      font-weight: 600;
+      min-width: 30px;
       text-align: center;
-      margin-top: 3rem;
     }
-    @media (max-width: 700px) {
-      .nav-container { flex-direction: column; text-align: center; }
-      .hero h2 { font-size: 1.8rem; }
-      .container { padding: 1rem; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-stats {
+        justify-content: center;
+      }
+      .trust-badge {
+        margin-top: 15px;
+        justify-content: center;
+      }
+      .header-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      .logo {
+        flex-direction: column;
+      }
+      .float-call {
+        right: 30px;
+        bottom: 110px;
+      }
+      .modal {
+        padding: 20px;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .step {
+      text-align: center;
+      flex: 1;
+      position: relative;
+    }
+
+    .step-number {
+      width: 35px;
+      height: 35px;
+      background: var(--light-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+      font-weight: 600;
+      color: var(--gray);
+    }
+
+    .step.active .step-number {
+      background: var(--primary-blue);
+      color: white;
+    }
+
+    .step.completed .step-number {
+      background: #28a745;
+      color: white;
+    }
+
+    .whatsapp-link {
+      color: #25d366;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
+  <div class="animated-bg"></div>
 
-<div class="header">
-  <div class="nav-container">
-    <div class="logo">
-      <h1>PAPPU YAAR</h1>
-      <p>TECHNICAL CLEANING SERVICES LLC</p>
-      <span class="website-badge"><i class="fas fa-globe"></i> www.pycleaners.com</span>
-    </div>
-    <div class="nav-buttons">
-      <a href="#" id="contactNavBtn" class="contact-btn"><i class="fas fa-phone-alt"></i> Contact</a>
-      <a href="https://wa.me/971507213196?text=Hello%20PAPPU%20YAAR" target="_blank" class="whatsapp-nav"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
-  </div>
-</div>
-
-<section class="hero">
-  <h2>✨ Premium Cleaning & Technical Maintenance</h2>
-  <p>Professional. Reliable. Fast. | UAE Professtional Services | Staff Selection Available</p>
-  <div class="certificates">
-    <div class="cert-badge"><i class="fas fa-certificate"></i> ISO 9001 Certified</div>
-    <div class="cert-badge"><i class="fas fa-leaf"></i> Eco-Friendly Products</div>
-    <div class="cert-badge"><i class="fas fa-trophy"></i> Best Service 2025</div>
-    <div class="cert-badge"><i class="fas fa-shield-alt"></i> Fully Insured</div>
-  </div>
-</section>
-
-<div class="container">
-  <div class="section-title"><i class="fas fa-concierge-bell"></i> Select Your Service Category</div>
-  <div class="services-grid" id="categoriesGrid"></div>
-
-  <!-- Cart Summary -->
-  <div class="cart-summary" id="cartSummary" style="display: none;">
-    <h4><i class="fas fa-shopping-cart"></i> Your Cart</h4>
-    <span class="cart-items-count" id="cartCount">0 items</span>
-    <button class="view-cart-btn" id="viewCartBtn"><i class="fas fa-arrow-right"></i> Proceed to Booking</button>
-  </div>
-</div>
-
-<footer>
-  <p><i class="fas fa-map-marker-alt"></i> Al Wair Union Coop, 1st Floor Office No. 29, Dubai, UAE</p>
-  <p>📞 +971 50 721 3196 | ✉️ info@pycleaners.com | 🌐 www.pycleaners.com</p>
-  <p>© 2025 PAPPU YAAR TECHNICAL CLEANING SERVICES LLC</p>
-</footer>
-
-<a href="https://wa.me/971507213196?text=Hello%20PAPPU%20YAAR" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-  let selectedServices = [];
-  let currentStepData = {};
-
-  const categories = [
-    { id: 'cleaning', name: '🧹 Cleaning Services', icon: 'fa-broom' },
-    { id: 'ac_repair', name: '❄️ AC Repair', icon: 'fa-wrench' },
-    { id: 'ac_cleaning', name: '🌀 AC Cleaning', icon: 'fa-wind' },
-    { id: 'plumbing', name: '🔧 Plumbing', icon: 'fa-tools' },
-    { id: 'window', name: '🪟 Window Cleaning', icon: 'fa-window-maximize' },
-    { id: 'sofa', name: '🛋️ Sofa Cleaning', icon: 'fa-couch' }
-  ];
-
-  const cleaningOptions = [
-    { id: 'normal_clean', name: 'Normal Cleaning', pricePerHour: 30, minHours: 3 },
-    { id: 'general_clean', name: 'General Cleaning', pricePerHour: 35, minHours: 3 },
-    { id: 'deep_clean', name: 'Deep Cleaning', pricePerHour: 45, minHours: 3 }
-  ];
-
-  const propertyTypes = [
-    { id: 'studio', name: '🏢 Studio', surchargePercent: 50, minHours: 2, img: 'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?w=200&h=150&fit=crop' },
-    { id: 'villa', name: '🏰 Villa', surchargePercent: 180, minHours: 3, img: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=200&h=150&fit=crop' },
-    { id: '1bhk', name: '🛋️ 1 BHK', surchargePercent: 70, minHours: 2, img: 'https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?w=200&h=150&fit=crop' },
-    { id: '2bhk', name: '🛋️🛋️ 2 BHK', surchargePercent: 90, minHours: 3, img: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?w=200&h=150&fit=crop' },
-    { id: '3bhk', name: '🏠 3 BHK', surchargePercent: 150, minHours: 4, img: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?w=200&h=150&fit=crop' },
-    { id: '4bhk', name: '🏘️ 4 BHK', surchargePercent: 200, minHours: 5, img: 'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?w=200&h=150&fit=crop' }
-  ];
-
-  const otherServicesMap = {
-    'ac_repair': { name: '❄️ AC Repair', basePrice: 149 },
-    'ac_cleaning': { name: '🌀 AC Cleaning', basePrice: 129 },
-    'plumbing': { name: '🔧 Plumbing Work', basePrice: 99 },
-    'window': { name: '🪟 Pest Control', basePrice: 99 },
-    'sofa': { name: '🛋️ Sofa Cleaning', basePrice: 119 }
-  };
-
-  const nationalities = ['Nepali', 'Filipino', 'Myanmar', 'African', 'Indian'];
-
-  let invoiceCounter = 1501;
-  function getNextInvoiceNumber() {
-    let stored = localStorage.getItem('pappu_invoice_last');
-    if(stored) invoiceCounter = parseInt(stored) + 1;
-    else invoiceCounter = 1501;
-    localStorage.setItem('pappu_invoice_last', invoiceCounter);
-    return invoiceCounter;
-  }
-
-  function updateCartDisplay() {
-    const cartSummary = document.getElementById('cartSummary');
-    const cartCount = document.getElementById('cartCount');
-    if (selectedServices.length > 0) {
-      cartSummary.style.display = 'flex';
-      cartCount.textContent = `${selectedServices.length} item${selectedServices.length > 1 ? 's' : ''}`;
-    } else {
-      cartSummary.style.display = 'none';
-    }
-  }
-
-  function renderCategories() {
-    const grid = document.getElementById('categoriesGrid');
-    grid.innerHTML = categories.map(cat => `
-      <div class="service-category-card" data-category="${cat.id}">
-        <i class="fas ${cat.icon}" style="font-size:3rem; color:var(--primary)"></i>
-        <h3>${cat.name}</h3>
-        <p style="color:#666; margin-top:0.5rem;">Click to book</p>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div>
+        <i class="fas fa-check-circle"></i> UAE Licensed & Certified
+        <i class="fas fa-star" style="margin-left: 20px;"></i> Est. 2025
+        <i class="fas fa-shield-alt" style="margin-left: 20px;"></i> Trusted by 5000+ Clients
       </div>
-    `).join('');
-    
-    document.querySelectorAll('.service-category-card').forEach(card => {
-      card.addEventListener('click', () => openCategoryModal(card.dataset.category));
-    });
-  }
+      <div>
+        <i class="fas fa-phone"></i> +971 50 721 3196
+        <i class="fas fa-envelope" style="margin-left: 15px;"></i> info@pappuyaar.ae
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-broom"></i>
+        </div>
+        <div class="logo-text">
+          <h1>PAPPU YAAR</h1>
+          <p>TECHNICAL CLEANING SERVICES LLC</p>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <div class="badge-item">
+          <i class="fas fa-certificate"></i>
+          <span>ISO Certified</span>
+        </div>
+        <div class="badge-item">
+          <i class="fas fa-user-shield"></i>
+          <span>Insured</span>
+        </div>
+        <div class="badge-item">
+          <i class="fas fa-medal"></i>
+          <span>5-Star Rated</span>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  function openCategoryModal(category) {
-    if (category === 'cleaning') {
-      openCleaningModal();
-    } else {
-      openOtherServiceModal(category);
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Premium <span>Cleaning</span> & Technical Services in Dubai</h2>
+      <p>Professional, Certified, and Trusted Cleaning Solutions for Your Home and Office. UAE Licensed Company with 100% Satisfaction Guarantee.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>5000+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Satisfaction</p>
+        </div>
+        <div class="stat">
+          <h3>24/7</h3>
+          <p>Support</p>
+        </div>
+      </div>
+      <button class="btn" style="width: auto; padding: 16px 40px;" onclick="scrollToServices()">
+        Book Now <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.pexels.com/photos/6195278/pexels-photo-6195278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Professional Cleaning Service" onerror="this.src='https://via.placeholder.com/600x400/1a73e8/ffffff?text=PAPPU+YAAR+CLEANING'">
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="section-title">
+      <h2>Our Premium Services</h2>
+      <p>Choose from our wide range of professional cleaning and technical services</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section class="certificates">
+    <div class="section-title">
+      <h2>Our Certifications & Accreditations</h2>
+      <p>Proudly certified and recognized for excellence</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <i class="fas fa-check-circle"></i>
+        <h4>DED Licensed</h4>
+        <p>Dubai Economy</p>
+      </div>
+      <div class="cert-item">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Fully Insured</h4>
+        <p>$1M Coverage</p>
+      </div>
+      <div class="cert-item">
+        <i class="fas fa-certificate"></i>
+        <h4>ISO 9001:2025</h4>
+        <p>Quality Management</p>
+      </div>
+      <div class="cert-item">
+        <i class="fas fa-leaf"></i>
+        <h4>Eco-Friendly</h4>
+        <p>Green Certified</p>
+      </div>
+      <div class="cert-item">
+        <i class="fas fa-user-graduate"></i>
+        <h4>Certified Staff</h4>
+        <p>Trained Professionals</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews">
+    <div class="section-title">
+      <h2>What Our Clients Say</h2>
+      <p>★★★★★ 4.9/5 from 2000+ Google Reviews</p>
+    </div>
+    <div class="review-cards">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">AK</div>
+          <div>
+            <h4>Ahmed Khan</h4>
+            <p>Dubai Marina</p>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>"Excellent service! The deep cleaning was thorough and professional. Highly recommend Pappu Yaar for their attention to detail."</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">SM</div>
+          <div>
+            <h4>Sarah Miller</h4>
+            <p>Jumeirah</p>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>"AC repair was quick and efficient. The technician was knowledgeable and fixed the issue in no time. Great service!"</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">RS</div>
+          <div>
+            <h4>Rajesh Sharma</h4>
+            <p>Al Barsha</p>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>"Used their pest control service. Very professional and effective. No more pests! Will definitely use again."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>PAPPU YAAR TECHNICAL</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Al Aweer, Union Coop, First Floor, Office 29, Dubai, UAE</p>
+        <p><i class="fas fa-phone"></i> +971 50 721 3196</p>
+        <p><i class="fas fa-envelope"></i> info@pappuyaar.ae</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="#home" style="color: white; text-decoration: none;">Home</a></p>
+        <p><a href="#services" style="color: white; text-decoration: none;">Services</a></p>
+        <p><a href="#" style="color: white; text-decoration: none;">About Us</a></p>
+        <p><a href="#" style="color: white; text-decoration: none;">Privacy Policy</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Business Hours</h3>
+        <p>Monday - Saturday: 8:00 AM - 10:00 PM</p>
+        <p>Sunday: 9:00 AM - 8:00 PM</p>
+        <p>24/7 Emergency Services Available</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PAPPU YAAR TECHNICAL CLEANING SERVICES LLC. All Rights Reserved. UAE Licensed.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/971507213196" class="float-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+971507213196" class="float-call">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <!-- Modal for Booking -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal" id="modalContent"></div>
+  </div>
+
+  <script>
+    // Service data
+    const services = [
+      { name: 'Cleaning', icon: 'fa-broom', desc: 'General, Deep & Full Home Cleaning', price: 'From 35 AED/hr', category: 'cleaning' },
+      { name: 'Pest Control', icon: 'fa-bug', desc: 'General & Deep Pest Control', price: 'From 159 AED', category: 'pest' },
+      { name: 'AC Repair', icon: 'fa-wind', desc: 'Professional AC Repair Services', price: 'Contact for Quote', category: 'ac-repair' },
+      { name: 'AC Cleaning', icon: 'fa-snowflake', desc: 'Complete AC Cleaning', price: 'Contact for Quote', category: 'ac-cleaning' },
+      { name: 'Plumbing', icon: 'fa-wrench', desc: 'All Plumbing Solutions', price: 'Contact for Quote', category: 'plumbing' },
+      { name: 'Sofa Cleaning', icon: 'fa-couch', desc: 'Per Seat Cleaning', price: '49 AED/seat', category: 'sofa' },
+      { name: 'Carpet Cleaning', icon: 'fa-rug', desc: '14 AED per meter', price: 'Starting 14 AED/m', category: 'carpet' },
+      { name: 'Window Cleaning', icon: 'fa-window-maximize', desc: '5x5 Windows', price: '70 AED/window', category: 'window' }
+    ];
+
+    // State management
+    let bookingState = {
+      service: null,
+      subService: null,
+      propertyType: null,
+      propertySize: null,
+      materialOption: null,
+      staffGender: 'Male',
+      staffNationality: 'Indian',
+      staffCount: 1,
+      date: null,
+      time: null,
+      customerName: '',
+      organization: '',
+      whatsapp: '',
+      phone: '',
+      location: 'Dubai',
+      address: '',
+      building: '',
+      floor: '',
+      room: '',
+      invoiceNumber: 'PY-15501',
+      totalAmount: 0
+    };
+
+    let currentStep = 1;
+    let lastInvoiceNumber = 15501;
+
+    // Render services
+    function renderServices() {
+      const grid = document.getElementById('servicesGrid');
+      grid.innerHTML = services.map(service => `
+        <div class="service-card" onclick="handleServiceClick('${service.category}')">
+          <div class="service-icon">
+            <i class="fas ${service.icon}"></i>
+          </div>
+          <h3>${service.name}</h3>
+          <p style="font-size: 0.9rem; color: var(--gray);">${service.desc}</p>
+          <p class="service-price">${service.price}</p>
+        </div>
+      `).join('');
     }
-  }
 
-  function openCleaningModal() {
-    let html = `<div class="modal-header"><h3><i class="fas fa-broom"></i> Select Cleaning Type</h3><span class="close-modal">&times;</span></div>`;
-    cleaningOptions.forEach(opt => {
-      html += `<div class="option-item" data-option-id="${opt.id}" data-name="${opt.name}" data-price="${opt.pricePerHour}" data-minhours="${opt.minHours}">
-        <div class="option-name">${opt.name}</div><div class="option-price">${opt.pricePerHour} AED / hour (Min ${opt.minHours} hrs)</div></div>`;
-    });
-    html += `<div class="modal-buttons"><button class="btn-secondary" id="cancelModal">Cancel</button></div>`;
-    showModal(html);
-    
-    document.querySelectorAll('.option-item').forEach(el => {
-      el.addEventListener('click', () => {
-        currentStepData = {
-          optionId: el.dataset.optionId, name: el.dataset.name,
-          pricePerHour: parseFloat(el.dataset.price), baseMinHours: parseInt(el.dataset.minhours)
-        };
-        openPropertyModal();
-      });
-    });
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-    document.getElementById('cancelModal')?.addEventListener('click', closeModal);
-  }
-
-  function openPropertyModal() {
-    let html = `<div class="modal-header"><h3><i class="fas fa-building"></i> Select Property Type</h3><span class="close-modal">&times;</span></div>
-      <p style="margin-bottom:1rem;">⚠️ Studio: 2hrs min | Other properties: +15% surcharge</p><div class="property-grid-modal">`;
-    propertyTypes.forEach(prop => {
-      html += `<div class="property-item" data-prop-id="${prop.id}" data-prop-name="${prop.name}" data-surcharge="${prop.surchargePercent}" data-prop-minhours="${prop.minHours}">
-        <img src="${prop.img}" alt="${prop.name}" onerror="this.src='https://placehold.co/200x150/0a5b9e/white?text=${prop.name}'">
-        <div style="font-weight:600;">${prop.name}</div><small>${prop.surchargePercent > 0 ? `+${prop.surchargePercent}%` : 'No surcharge'}<br>Min ${prop.minHours} hrs</small></div>`;
-    });
-    html += `</div><div class="modal-buttons"><button class="btn-secondary" id="backCleaning">Back</button></div>`;
-    showModal(html);
-    
-    document.querySelectorAll('.property-item').forEach(el => {
-      el.addEventListener('click', () => {
-        document.querySelectorAll('.property-item').forEach(p => p.classList.remove('selected'));
-        el.classList.add('selected');
-        currentStepData.property = {
-          id: el.dataset.propId, name: el.dataset.propName,
-          surchargePercent: parseFloat(el.dataset.surcharge), minHours: parseInt(el.dataset.propMinhours)
-        };
-        openHoursModal();
-      });
-    });
-    document.getElementById('backCleaning')?.addEventListener('click', () => openCleaningModal());
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
-
-  function openHoursModal() {
-    const effectiveMinHours = Math.max(currentStepData.baseMinHours, currentStepData.property.minHours);
-    let html = `<div class="modal-header"><h3><i class="fas fa-clock"></i> Select Duration</h3><span class="close-modal">&times;</span></div>
-      <p>Service: ${currentStepData.name}</p><p>Property: ${currentStepData.property.name}</p>
-      <p>Price per hour: ${currentStepData.pricePerHour} AED</p>
-      <p style="color:#e67e22;">⚠️ Minimum ${effectiveMinHours} hours</p>
-      <label>Number of hours:</label>
-      <input type="number" id="hoursInput" min="${effectiveMinHours}" value="${effectiveMinHours}" style="margin:1rem 0; width:100%;">
-      <div class="modal-buttons"><button class="btn-secondary" id="backProperty">Back</button><button class="btn-primary" id="nextMaterial">Next: Material Option</button></div>`;
-    showModal(html);
-    
-    document.getElementById('nextMaterial')?.addEventListener('click', () => {
-      const hours = parseInt(document.getElementById('hoursInput').value);
-      if (hours < effectiveMinHours) { alert(`Minimum ${effectiveMinHours} hours required`); return; }
-      currentStepData.hours = hours;
-      currentStepData.baseTotal = currentStepData.pricePerHour * hours;
-      openStaffMaterialModal();
-    });
-    document.getElementById('backProperty')?.addEventListener('click', () => openPropertyModal());
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
-
-  function openStaffMaterialModal() {
-    let html = `<div class="modal-header"><h3><i class="fas fa-user-friends"></i> Staff & Material Options</h3><span class="close-modal">&times;</span></div>
-      <div class="staff-option" data-gender="male"><div class="staff-icon"><i class="fas fa-mars"></i></div><div><strong>Male Staff</strong></div></div>
-      <div class="staff-option" data-gender="female"><div class="staff-icon"><i class="fas fa-venus"></i></div><div><strong>Female Staff</strong></div></div>
-      <label style="margin: 15px 0 5px; font-weight:600;">Number of Staff:</label>
-      <input type="number" id="staffCount" min="1" max="5" value="1" style="width:100%; padding:12px; border-radius:30px; border:1.5px solid #e2e8f0;">
-      <label style="margin: 15px 0 5px; font-weight:600;">Select Nationality:</label>
-      <select id="nationalitySelect" class="nationality-select"><option value="">Select Nationality</option>${nationalities.map(n => `<option value="${n}">${n}</option>`).join('')}</select>
-      <div style="margin: 15px 0;"><strong>Material Option:</strong></div>
-      <div class="option-item" data-material="false"><div class="option-name">🚫 Without Material</div><div class="option-price">No extra charge</div></div>
-      <div class="option-item" data-material="true"><div class="option-name">📦 With Material</div><div class="option-price">+20 AED</div></div>
-      <div class="modal-buttons"><button class="btn-secondary" id="backHoursStaff">Back</button><button class="btn-primary" id="confirmStaffMaterial">Add to Cart</button></div>`;
-    showModal(html);
-    
-    let selectedGender = null;
-    let selectedMaterial = false;
-    
-    document.querySelectorAll('.staff-option').forEach(el => {
-      el.addEventListener('click', () => {
-        document.querySelectorAll('.staff-option').forEach(opt => opt.classList.remove('selected'));
-        el.classList.add('selected');
-        selectedGender = el.dataset.gender;
-      });
-    });
-    
-    document.querySelectorAll('.option-item[data-material]').forEach(el => {
-      el.addEventListener('click', () => {
-        document.querySelectorAll('.option-item[data-material]').forEach(opt => opt.classList.remove('selected'));
-        el.classList.add('selected');
-        selectedMaterial = el.dataset.material === 'true';
-      });
-    });
-    
-    document.getElementById('confirmStaffMaterial')?.addEventListener('click', () => {
-      if (!selectedGender) { alert("Please select staff gender"); return; }
-      const nationality = document.getElementById('nationalitySelect').value;
-      if (!nationality) { alert("Please select nationality"); return; }
-      const staffCount = parseInt(document.getElementById('staffCount').value) || 1;
+    // Handle service click
+    function handleServiceClick(category) {
+      bookingState = {
+        service: null,
+        subService: null,
+        propertyType: null,
+        propertySize: null,
+        materialOption: null,
+        staffGender: 'Male',
+        staffNationality: 'Indian',
+        staffCount: 1,
+        date: null,
+        time: null,
+        customerName: '',
+        organization: '',
+        whatsapp: '',
+        phone: '',
+        location: 'Dubai',
+        address: '',
+        building: '',
+        floor: '',
+        room: '',
+        invoiceNumber: 'PY-' + (++lastInvoiceNumber),
+        totalAmount: 0
+      };
       
-      currentStepData.staff = { gender: selectedGender, nationality: nationality, count: staffCount };
-      currentStepData.withMaterial = selectedMaterial;
-      currentStepData.materialCharge = selectedMaterial ? 20 : 0;
-      openDateTimeModal();
-    });
-    document.getElementById('backHoursStaff')?.addEventListener('click', () => openHoursModal());
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
+      bookingState.service = category;
+      currentStep = 1;
+      
+      if (category === 'cleaning') {
+        showCleaningSubServices();
+      } else if (category === 'pest') {
+        showPestControlOptions();
+      } else if (category === 'ac-repair' || category === 'ac-cleaning') {
+        redirectToWhatsApp(category);
+      } else if (category === 'plumbing') {
+        redirectToWhatsApp('plumbing');
+      } else if (category === 'sofa') {
+        showSofaOptions();
+      } else if (category === 'carpet') {
+        showCarpetOptions();
+      } else if (category === 'window') {
+        redirectToWhatsApp('window cleaning');
+      }
+    }
 
-  function openDateTimeModal() {
-    let html = `<div class="modal-header"><h3><i class="fas fa-calendar-alt"></i> Select Date & Time</h3><span class="close-modal">&times;</span></div>
-      <label>Preferred Date:</label><input type="date" id="serviceDate" min="${new Date().toISOString().split('T')[0]}" style="margin:0.5rem 0 1rem; width:100%;">
-      <label>Preferred Time:</label><input type="time" id="serviceTime" style="margin:0.5rem 0 1rem; width:100%;">
-      <div class="modal-buttons"><button class="btn-secondary" id="backStaffDateTime">Back</button><button class="btn-primary" id="finalizeService">Add to Cart</button></div>`;
-    showModal(html);
-    
-    document.getElementById('finalizeService')?.addEventListener('click', () => {
-      const date = document.getElementById('serviceDate').value;
-      const time = document.getElementById('serviceTime').value;
-      if (!date || !time) { alert('Please select date and time'); return; }
-      currentStepData.dateTime = `${date} at ${time}`;
-      let afterMaterialTotal = currentStepData.baseTotal + currentStepData.materialCharge;
-      let surchargeAmount = currentStepData.property.surchargePercent > 0 ? afterMaterialTotal * (currentStepData.property.surchargePercent / 100) : 0;
-      const finalTotal = afterMaterialTotal + surchargeAmount;
-      const serviceName = `${currentStepData.name} - ${currentStepData.hours} hrs (${currentStepData.property.name})${currentStepData.withMaterial ? ' + Material' : ''}${surchargeAmount > 0 ? ` +${currentStepData.property.surchargePercent}%` : ''} | Staff: ${currentStepData.staff.gender === 'male' ? 'Male' : 'Female'} (${currentStepData.staff.nationality}) x${currentStepData.staff.count}`;
-      selectedServices.push({ id: `clean_${Date.now()}`, name: serviceName, price: finalTotal, dateTime: currentStepData.dateTime, staff: currentStepData.staff });
-      closeModal();
-      updateCartDisplay();
-      alert(`✅ Added to cart: ${serviceName}\nTotal: ${finalTotal.toFixed(2)} AED`);
-    });
-    document.getElementById('backStaffDateTime')?.addEventListener('click', () => openStaffMaterialModal());
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
-
-  function openOtherServiceModal(category) {
-    const service = otherServicesMap[category];
-    let html = `<div class="modal-header"><h3>${service.name}</h3><span class="close-modal">&times;</span></div>
-      <div class="staff-option" data-gender="male"><div class="staff-icon"><i class="fas fa-mars"></i></div><div><strong>Male Staff</strong></div></div>
-      <div class="staff-option" data-gender="female"><div class="staff-icon"><i class="fas fa-venus"></i></div><div><strong>Female Staff</strong></div></div>
-      <label style="margin: 15px 0 5px; font-weight:600;">Number of Staff:</label>
-      <input type="number" id="staffCountOther" min="1" max="3" value="1" style="width:100%; padding:12px; border-radius:30px; border:1.5px solid #e2e8f0;">
-      <label style="margin: 15px 0 5px; font-weight:600;">Select Nationality:</label>
-      <select id="nationalitySelectOther" class="nationality-select"><option value="">Select Nationality</option>${nationalities.map(n => `<option value="${n}">${n}</option>`).join('')}</select>
-      <div style="margin: 15px 0;"><strong>Material Option:</strong></div>
-      <div class="option-item" data-material="false"><div class="option-name">🔧 Without Material</div><div class="option-price">${service.basePrice} AED</div></div>
-      <div class="option-item" data-material="true"><div class="option-name">📦 With Material</div><div class="option-price">${service.basePrice + 20} AED</div></div>
-      <div class="modal-buttons"><button class="btn-secondary" id="cancelOther">Cancel</button><button class="btn-primary" id="confirmOther">Add to Cart</button></div>`;
-    showModal(html);
-    
-    let selectedGender = null;
-    let selectedMaterial = false;
-    
-    document.querySelectorAll('.staff-option').forEach(el => {
-      el.addEventListener('click', () => {
-        document.querySelectorAll('.staff-option').forEach(opt => opt.classList.remove('selected'));
-        el.classList.add('selected');
-        selectedGender = el.dataset.gender;
-      });
-    });
-    
-    document.querySelectorAll('.option-item[data-material]').forEach(el => {
-      el.addEventListener('click', () => {
-        document.querySelectorAll('.option-item[data-material]').forEach(opt => opt.classList.remove('selected'));
-        el.classList.add('selected');
-        selectedMaterial = el.dataset.material === 'true';
-      });
-    });
-    
-    document.getElementById('confirmOther')?.addEventListener('click', () => {
-      if (!selectedGender) { alert("Please select staff gender"); return; }
-      const nationality = document.getElementById('nationalitySelectOther').value;
-      if (!nationality) { alert("Please select nationality"); return; }
-      const staffCount = parseInt(document.getElementById('staffCountOther').value) || 1;
-      const finalPrice = selectedMaterial ? service.basePrice + 20 : service.basePrice;
-      const now = new Date().toLocaleString();
-      const serviceDisplayName = `${service.name}${selectedMaterial ? ' (with material)' : ''} | Staff: ${selectedGender === 'male' ? 'Male' : 'Female'} ${nationality} x${staffCount}`;
-      selectedServices.push({ id: `${category}_${Date.now()}`, name: serviceDisplayName, price: finalPrice, dateTime: now });
-      closeModal();
-      updateCartDisplay();
-      alert(`✅ Added to cart: ${serviceDisplayName}\nTotal: ${finalPrice} AED`);
-    });
-    document.getElementById('cancelOther')?.addEventListener('click', closeModal);
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
-
-  function showModal(html) {
-    let modal = document.getElementById('dynamicModal');
-    if (!modal) { modal = document.createElement('div'); modal.id = 'dynamicModal'; modal.className = 'modal'; document.body.appendChild(modal); }
-    modal.innerHTML = `<div class="modal-content">${html}</div>`;
-    modal.style.display = 'flex';
-  }
-
-  function closeModal() { const modal = document.getElementById('dynamicModal'); if (modal) modal.style.display = 'none'; }
-
-  // View Cart - Show Booking Details Form
-  document.getElementById('viewCartBtn')?.addEventListener('click', () => {
-    if (selectedServices.length === 0) { alert("Your cart is empty"); return; }
-    showBookingDetailsForm();
-  });
-
-  function showBookingDetailsForm() {
-    let servicesHtml = selectedServices.map(s => `<div class="service-tag">${s.name} - ${s.price.toFixed(2)} AED<br><small>📅 ${s.dateTime}</small></div>`).join('');
-    let subtotal = selectedServices.reduce((sum, s) => sum + s.price, 0);
-    
-    let html = `<div class="modal-header"><h3><i class="fas fa-edit"></i> Your Booking Details</h3><span class="close-modal">&times;</span></div>
-      <div class="selected-services-list" style="background:#f1f5f9; border-radius:20px; padding:1rem; margin-bottom:1rem;">
-        <strong>📋 Selected Services:</strong><br>
-        ${servicesHtml || '<p>No services</p>'}
-        <hr style="margin:10px 0;">
-        <div style="display:flex; justify-content:space-between;"><strong>Subtotal:</strong> ${subtotal.toFixed(2)} AED</div>
-      </div>
-      <form id="bookingDetailsForm">
-        <div class="form-row">
-          <div class="form-group"><label>Full Name *</label><input type="text" id="fullName" required></div>
-          <div class="form-group"><label>WhatsApp Number *</label><input type="tel" id="whatsappNumber" required></div>
+    function showCleaningSubServices() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Select Cleaning Type</h3>
+        <div class="modal-option" onclick="selectCleaningType('general')">
+          <h4>General Cleaning <span style="color: var(--primary-blue);">35 AED/hr</span></h4>
+          <p>Minimum 3 hours per booking</p>
         </div>
-        <div class="form-row">
-          <div class="form-group"><label>Calling Number *</label><input type="tel" id="callNumber" required></div>
-          <div class="form-group"><label>Address *</label><input type="text" id="address" required></div>
+        <div class="modal-option" onclick="selectCleaningType('deep')">
+          <h4>Deep Cleaning <span style="color: var(--primary-blue);">45 AED/hr</span></h4>
+          <p>Minimum 3 hours per booking</p>
         </div>
-        <div class="form-row">
-          <div class="form-group"><label>Landmark *</label><input type="text" id="landmark" required></div>
-          <div class="form-group"><label>Location / Area *</label><input type="text" id="location" required></div>
+        <div class="modal-option" onclick="selectFullHomeDeep()">
+          <h4>Full Home Deep Cleaning <span style="color: var(--primary-blue);">1299 AED</span></h4>
+          <p>Complete home deep cleaning package</p>
         </div>
-        <div class="form-group"><label>Special Requests</label><textarea rows="2" id="specialReq"></textarea></div>
-        <div class="payment-options">
-          <label class="pay-method"><input type="radio" name="paymentMethod" value="Cash" checked> <i class="fas fa-money-bill-wave"></i> Cash on Arrival</label>
-          <label class="pay-method"><input type="radio" name="paymentMethod" value="Card"> <i class="fas fa-credit-card"></i> Card / Online</label>
+      `;
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+
+    function selectCleaningType(type) {
+      bookingState.subService = type;
+      showPropertyTypeSelection();
+    }
+
+    function selectFullHomeDeep() {
+      bookingState.subService = 'full-home-deep';
+      bookingState.totalAmount = 1299;
+      currentStep = 4;
+      showStaffSelection();
+    }
+
+    function showPropertyTypeSelection() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="progress-steps">
+          <div class="step completed"><div class="step-number">1</div><span>Service</span></div>
+          <div class="step active"><div class="step-number">2</div><span>Property</span></div>
+          <div class="step"><div class="step-number">3</div><span>Staff</span></div>
+          <div class="step"><div class="step-number">4</div><span>Details</span></div>
         </div>
-        <div class="modal-buttons">
-          <button type="button" class="btn-secondary" id="cancelBooking">Cancel</button>
-          <button type="submit" class="btn-primary">Proceed to Billing Summary</button>
+        <h3>Select Property Type</h3>
+        <div class="modal-option" onclick="selectPropertyType('studio')">
+          <h4>Studio</h4>
         </div>
-      </form>`;
-    showModal(html);
-    
-    document.getElementById('bookingDetailsForm')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fullName = document.getElementById('fullName').value.trim();
-      const whatsappNum = document.getElementById('whatsappNumber').value.trim();
-      const callNum = document.getElementById('callNumber').value.trim();
-      const address = document.getElementById('address').value.trim();
-      const landmark = document.getElementById('landmark').value.trim();
-      const location = document.getElementById('location').value.trim();
-      if (!fullName || !whatsappNum || !callNum || !address || !landmark || !location) {
-        alert("❌ Please fill all required fields");
+        <div class="modal-option" onclick="selectPropertyType('villa')">
+          <h4>Villa</h4>
+        </div>
+        <div class="modal-option" onclick="selectPropertyType('apartment')">
+          <h4>Apartment</h4>
+        </div>
+      `;
+    }
+
+    function selectPropertyType(type) {
+      bookingState.propertyType = type;
+      if (type === 'studio') {
+        showMaterialOption('studio');
+      } else if (type === 'villa') {
+        showVillaSizeSelection();
+      } else if (type === 'apartment') {
+        showApartmentSizeSelection();
+      }
+    }
+
+    function showMaterialOption(propertyType) {
+      const modal = document.getElementById('modalContent');
+      const materialPrice = propertyType === 'studio' ? 20 : (propertyType === 'villa' ? 50 : 30);
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Select Material Option</h3>
+        <div class="modal-option" onclick="selectMaterial(true, ${materialPrice})">
+          <h4>With Material <span style="color: var(--primary-blue);">+${materialPrice} AED</span></h4>
+        </div>
+        <div class="modal-option" onclick="selectMaterial(false, 0)">
+          <h4>Without Material <span style="color: var(--primary-blue);">0 AED</span></h4>
+        </div>
+      `;
+    }
+
+    function selectMaterial(withMaterial, price) {
+      bookingState.materialOption = { withMaterial, price };
+      currentStep = 3;
+      showStaffSelection();
+    }
+
+    function showVillaSizeSelection() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Select Villa Size</h3>
+        <select id="villaSize" class="form-group" style="padding: 12px; border-radius: 12px; border: 2px solid var(--light-blue);">
+          <option value="">Select BHK</option>
+          <option value="1BHK" data-price="550">1 BHK - 550 AED</option>
+          <option value="2BHK" data-price="850">2 BHK - 850 AED</option>
+          <option value="3BHK" data-price="1150">3 BHK - 1150 AED</option>
+          <option value="4BHK" data-price="1550">4 BHK - 1550 AED</option>
+          <option value="5BHK" data-price="1980">5 BHK - 1980 AED</option>
+          <option value="6BHK" data-price="2350">6 BHK - 2350 AED</option>
+        </select>
+        <button class="btn" style="margin-top: 20px;" onclick="selectVillaSize()">Continue</button>
+      `;
+    }
+
+    function selectVillaSize() {
+      const select = document.getElementById('villaSize');
+      const selected = select.options[select.selectedIndex];
+      if (selected.value) {
+        bookingState.propertySize = selected.value;
+        bookingState.totalAmount = parseInt(selected.dataset.price);
+        showMaterialOption('villa');
+      }
+    }
+
+    function showApartmentSizeSelection() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Select Apartment Size</h3>
+        <select id="apartmentSize" class="form-group" style="padding: 12px; border-radius: 12px; border: 2px solid var(--light-blue);">
+          <option value="">Select BHK</option>
+          <option value="1BHK" data-material="30" data-surcharge="35">1 BHK Apartment</option>
+          <option value="2BHK" data-material="35" data-surcharge="65">2 BHK Apartment</option>
+          <option value="3BHK" data-material="55" data-surcharge="85">3 BHK Apartment</option>
+          <option value="4BHK" data-material="100" data-surcharge="120">4 BHK Apartment</option>
+          <option value="5BHK" data-material="150" data-surcharge="150">5 BHK Apartment</option>
+          <option value="6BHK" data-material="250" data-surcharge="200">6 BHK Apartment</option>
+        </select>
+        <button class="btn" style="margin-top: 20px;" onclick="selectApartmentSize()">Continue</button>
+      `;
+    }
+
+    function selectApartmentSize() {
+      const select = document.getElementById('apartmentSize');
+      const selected = select.options[select.selectedIndex];
+      if (selected.value) {
+        bookingState.propertySize = selected.value;
+        bookingState.apartmentData = {
+          materialPrice: parseInt(selected.dataset.material),
+          surcharge: parseInt(selected.dataset.surcharge)
+        };
+        showMaterialOption('apartment');
+      }
+    }
+
+    function showStaffSelection() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="progress-steps">
+          <div class="step completed"><div class="step-number">1</div><span>Service</span></div>
+          <div class="step completed"><div class="step-number">2</div><span>Property</span></div>
+          <div class="step active"><div class="step-number">3</div><span>Staff</span></div>
+          <div class="step"><div class="step-number">4</div><span>Details</span></div>
+        </div>
+        <h3>Staff Preferences</h3>
+        <div class="form-group">
+          <label>Staff Gender</label>
+          <select id="staffGender" onchange="bookingState.staffGender = this.value">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Nationality</label>
+          <select id="staffNationality" onchange="bookingState.staffNationality = this.value">
+            <option value="Indian">Indian</option>
+            <option value="Filipino">Filipino</option>
+            <option value="Nepali">Nepali</option>
+            <option value="African">African</option>
+            <option value="Myanmar">Myanmar</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Number of Staff (Additional staff: 25 AED each)</label>
+          <div class="staff-selector">
+            <button onclick="changeStaffCount(-1)">-</button>
+            <span id="staffCount">1</span>
+            <button onclick="changeStaffCount(1)">+</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Select Date</label>
+          <input type="date" id="bookingDate" min="${new Date().toISOString().split('T')[0]}" onchange="bookingState.date = this.value">
+        </div>
+        <div class="form-group">
+          <label>Select Time</label>
+          <input type="time" id="bookingTime" onchange="bookingState.time = this.value">
+        </div>
+        <button class="btn" onclick="calculateAndShowInvoice()">Calculate & Continue</button>
+      `;
+    }
+
+    function changeStaffCount(delta) {
+      bookingState.staffCount = Math.max(1, bookingState.staffCount + delta);
+      document.getElementById('staffCount').textContent = bookingState.staffCount;
+    }
+
+    function calculateAndShowInvoice() {
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+      
+      if (!date || !time) {
+        alert('Please select date and time');
         return;
       }
-      const bookingData = { fullName, whatsappNum, callNum, address, landmark, location, specialReq: document.getElementById('specialReq').value, paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').value };
-      showBillingSummary(bookingData);
+      
+      bookingState.date = date;
+      bookingState.time = time;
+      
+      // Calculate total
+      let total = bookingState.totalAmount || 0;
+      
+      if (bookingState.subService === 'general') {
+        total = 105; // 35 * 3 hours minimum
+      } else if (bookingState.subService === 'deep') {
+        total = 135; // 45 * 3 hours minimum
+      }
+      
+      if (bookingState.materialOption) {
+        total += bookingState.materialOption.price;
+      }
+      
+      // Add surcharge for apartments
+      if (bookingState.propertyType === 'apartment' && bookingState.apartmentData) {
+        total += (total * bookingState.apartmentData.surcharge / 100);
+      }
+      
+      // Add additional staff cost
+      if (bookingState.staffCount > 1) {
+        total += (bookingState.staffCount - 1) * 25;
+      }
+      
+      bookingState.totalAmount = Math.round(total);
+      
+      showInvoice();
+    }
+
+    function showInvoice() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Invoice Preview</h3>
+        <div class="invoice-preview">
+          <p style="margin-bottom: 15px;"><strong>Invoice #${bookingState.invoiceNumber}</strong></p>
+          <div class="invoice-item"><span>Service:</span><span>${bookingState.service} - ${bookingState.subService || 'Standard'}</span></div>
+          <div class="invoice-item"><span>Property:</span><span>${bookingState.propertyType || 'N/A'} ${bookingState.propertySize || ''}</span></div>
+          <div class="invoice-item"><span>Material:</span><span>${bookingState.materialOption?.withMaterial ? 'With' : 'Without'} Material</span></div>
+          <div class="invoice-item"><span>Staff:</span><span>${bookingState.staffCount} ${bookingState.staffGender} (${bookingState.staffNationality})</span></div>
+          <div class="invoice-item"><span>Date & Time:</span><span>${bookingState.date} at ${bookingState.time}</span></div>
+          <div class="invoice-total">
+            <span>Total Amount:</span>
+            <span>${bookingState.totalAmount} AED</span>
+          </div>
+        </div>
+        <button class="btn" onclick="showCustomerDetailsForm()">Proceed to Booking</button>
+        <button class="btn btn-outline" style="margin-top: 10px;" onclick="currentStep=3; showStaffSelection()">Modify Selection</button>
+      `;
+    }
+
+    function showCustomerDetailsForm() {
+      currentStep = 4;
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="progress-steps">
+          <div class="step completed"><div class="step-number">1</div><span>Service</span></div>
+          <div class="step completed"><div class="step-number">2</div><span>Property</span></div>
+          <div class="step completed"><div class="step-number">3</div><span>Staff</span></div>
+          <div class="step active"><div class="step-number">4</div><span>Details</span></div>
+        </div>
+        <h3>Customer Details</h3>
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="customerName" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label>Organization (Optional)</label>
+          <input type="text" id="organization" placeholder="Company name">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp Number *</label>
+          <input type="tel" id="whatsapp" placeholder="+971 XX XXX XXXX">
+        </div>
+        <div class="form-group">
+          <label>Calling Number *</label>
+          <input type="tel" id="phone" placeholder="+971 XX XXX XXXX">
+        </div>
+        <div class="form-group">
+          <label>Location *</label>
+          <select id="location">
+            <option value="Dubai">Dubai</option>
+            <option value="Sharjah">Sharjah</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Address Street/Building/Villa Name *</label>
+          <input type="text" id="address" placeholder="Street address">
+        </div>
+        <div class="form-group">
+          <label>Building/Villa Number *</label>
+          <input type="text" id="building" placeholder="Building number">
+        </div>
+        <div class="form-group">
+          <label>Floor No.</label>
+          <input type="text" id="floor" placeholder="Floor">
+        </div>
+        <div class="form-group">
+          <label>Room/Flat No.</label>
+          <input type="text" id="room" placeholder="Room number">
+        </div>
+        <button class="btn" onclick="submitBooking()">Submit Booking</button>
+        <button class="btn btn-outline" style="margin-top: 10px;" onclick="showInvoice()">Back to Invoice</button>
+      `;
+    }
+
+    function submitBooking() {
+      bookingState.customerName = document.getElementById('customerName').value;
+      bookingState.organization = document.getElementById('organization').value;
+      bookingState.whatsapp = document.getElementById('whatsapp').value;
+      bookingState.phone = document.getElementById('phone').value;
+      bookingState.location = document.getElementById('location').value;
+      bookingState.address = document.getElementById('address').value;
+      bookingState.building = document.getElementById('building').value;
+      bookingState.floor = document.getElementById('floor').value;
+      bookingState.room = document.getElementById('room').value;
+      
+      if (!bookingState.customerName || !bookingState.whatsapp || !bookingState.phone || !bookingState.address || !bookingState.building) {
+        alert('Please fill all required fields');
+        return;
+      }
+      
+      // Format message for WhatsApp with proper encoding
+      let message = `*🔷 NEW BOOKING CONFIRMATION - PAPPU YAAR TECHNICAL CLEANING SERVICES LLC 🔷*\n\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*📋 INVOICE DETAILS*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*Invoice #:* ${bookingState.invoiceNumber}\n`;
+      message += `*Date:* ${new Date().toLocaleDateString('en-GB')}\n`;
+      message += `*Time:* ${new Date().toLocaleTimeString('en-US')}\n\n`;
+      
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*🧹 SERVICE DETAILS*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      
+      // Service name formatting
+      let serviceDisplay = '';
+      if (bookingState.service === 'cleaning') {
+        if (bookingState.subService === 'general') serviceDisplay = 'General Cleaning (35 AED/hr, Min 3hrs)';
+        else if (bookingState.subService === 'deep') serviceDisplay = 'Deep Cleaning (45 AED/hr, Min 3hrs)';
+        else if (bookingState.subService === 'full-home-deep') serviceDisplay = 'Full Home Deep Cleaning Package';
+        else serviceDisplay = 'Cleaning Service';
+      } else if (bookingState.service === 'pest') {
+        serviceDisplay = bookingState.subService === 'general-pest' ? 'General Pest Control (159 AED)' : 'Deep Pest Control';
+      } else if (bookingState.service === 'sofa') {
+        serviceDisplay = `Sofa Cleaning - ${bookingState.subService.replace('sofa-', '').replace('-seats', '')} Seats (49 AED/seat)`;
+      } else {
+        serviceDisplay = bookingState.service;
+      }
+      message += `*Service:* ${serviceDisplay}\n`;
+      
+      if (bookingState.propertyType) {
+        let propertyDisplay = bookingState.propertyType.toUpperCase();
+        if (bookingState.propertySize) propertyDisplay += ` - ${bookingState.propertySize}`;
+        message += `*Property Type:* ${propertyDisplay}\n`;
+      }
+      
+      if (bookingState.materialOption) {
+        message += `*Material:* ${bookingState.materialOption.withMaterial ? 'With Material' : 'Without Material'} (${bookingState.materialOption.price} AED)\n`;
+      }
+      
+      message += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*👥 STAFF DETAILS*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*Gender:* ${bookingState.staffGender}\n`;
+      message += `*Nationality:* ${bookingState.staffNationality}\n`;
+      message += `*Number of Staff:* ${bookingState.staffCount} ${bookingState.staffCount > 1 ? `(+${(bookingState.staffCount-1)*25} AED)` : ''}\n`;
+      message += `*Appointment Date:* ${bookingState.date}\n`;
+      message += `*Appointment Time:* ${bookingState.time}\n\n`;
+      
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*👤 CUSTOMER DETAILS*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*Full Name:* ${bookingState.customerName}\n`;
+      if (bookingState.organization) message += `*Organization:* ${bookingState.organization}\n`;
+      message += `*WhatsApp:* ${bookingState.whatsapp}\n`;
+      message += `*Phone:* ${bookingState.phone}\n`;
+      message += `*Location:* ${bookingState.location}\n`;
+      message += `*Address:* ${bookingState.address}\n`;
+      message += `*Building/Villa:* ${bookingState.building}\n`;
+      if (bookingState.floor) message += `*Floor:* ${bookingState.floor}\n`;
+      if (bookingState.room) message += `*Room/Flat:* ${bookingState.room}\n\n`;
+      
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*💰 PAYMENT DETAILS*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `*TOTAL AMOUNT:* *${bookingState.totalAmount} AED*\n`;
+      message += `*Payment Method:* Cash / Card on Site\n\n`;
+      
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `📍 *OFFICE LOCATION*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `Al Aweer, Union Coop\n`;
+      message += `First Floor, Office 29\n`;
+      message += `Dubai, UAE\n\n`;
+      
+      message += `📞 *Contact:* +971 50 721 3196\n`;
+      message += `📧 *Email:* info@pappuyaar.ae\n\n`;
+      
+      message += `✅ *Thank you for choosing PAPPU YAAR TECHNICAL CLEANING SERVICES LLC*\n`;
+      message += `🏆 *UAE Licensed & Certified Professionals*\n`;
+      message += `⭐ *Est. 2025 - Trusted by 5000+ Clients*\n\n`;
+      
+      message += `_Please confirm this booking by replying "CONFIRM"_`;
+      
+      // Properly encode for WhatsApp URL
+      const encodedMessage = encodeURIComponent(message);
+      
+      // Send to WhatsApp
+      window.open(`https://wa.me/971507213196?text=${encodedMessage}`, '_blank');
+      
+      alert('Booking submitted successfully! We will contact you shortly for confirmation.');
+      closeModal();
+    }
+
+    function showPestControlOptions() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Pest Control Services</h3>
+        <div class="modal-option" onclick="selectGeneralPest()">
+          <h4>General Pest Control <span style="color: var(--primary-blue);">159 AED</span></h4>
+          <p>Complete general pest treatment</p>
+        </div>
+        <div class="modal-option" onclick="redirectToWhatsApp('deep pest control')">
+          <h4>Deep Pest Control</h4>
+          <p>Contact us for deep pest control quote</p>
+        </div>
+      `;
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+
+    function selectGeneralPest() {
+      bookingState.subService = 'general-pest';
+      bookingState.totalAmount = 159;
+      currentStep = 3;
+      showStaffSelection();
+    }
+
+    function showSofaOptions() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Sofa Cleaning - 49 AED per seat</h3>
+        <div class="form-group">
+          <label>Number of Seats</label>
+          <select id="sofaSeats" class="form-group" style="padding: 12px; border-radius: 12px;">
+            <option value="2">2 Seats - 98 AED</option>
+            <option value="3">3 Seats - 147 AED</option>
+            <option value="4">4 Seats - 196 AED</option>
+            <option value="5">5 Seats - 245 AED</option>
+            <option value="6">6 Seats - 294 AED</option>
+            <option value="7">7 Seats - 343 AED</option>
+            <option value="8">8 Seats - 392 AED</option>
+          </select>
+        </div>
+        <button class="btn" onclick="selectSofaSeats()">Continue</button>
+      `;
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+
+    function selectSofaSeats() {
+      const seats = parseInt(document.getElementById('sofaSeats').value);
+      bookingState.subService = `sofa-${seats}-seats`;
+      bookingState.totalAmount = seats * 49;
+      currentStep = 3;
+      showStaffSelection();
+    }
+
+    function showCarpetOptions() {
+      const modal = document.getElementById('modalContent');
+      modal.innerHTML = `
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3>Carpet Cleaning - 14 AED per meter</h3>
+        <p>For carpet cleaning, please contact us for a precise quote based on your carpet size.</p>
+        <button class="btn" style="margin-top: 20px;" onclick="redirectToWhatsApp('carpet cleaning quote')">
+          Contact on WhatsApp
+        </button>
+      `;
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+
+    function redirectToWhatsApp(service) {
+      const message = `I would like to inquire about ${service} services. Please provide more information.`;
+      window.open(`https://wa.me/971507213196?text=${encodeURIComponent(message)}`, '_blank');
+      closeModal();
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').style.display = 'none';
+      bookingState = {
+        service: null,
+        subService: null,
+        propertyType: null,
+        propertySize: null,
+        materialOption: null,
+        staffGender: 'Male',
+        staffNationality: 'Indian',
+        staffCount: 1,
+        date: null,
+        time: null,
+        customerName: '',
+        organization: '',
+        whatsapp: '',
+        phone: '',
+        location: 'Dubai',
+        address: '',
+        building: '',
+        floor: '',
+        room: '',
+        invoiceNumber: 'PY-' + (++lastInvoiceNumber),
+        totalAmount: 0
+      };
+    }
+
+    function scrollToServices() {
+      document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServices();
+      
+      // Close modal on overlay click
+      document.getElementById('bookingModal').addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+          closeModal();
+        }
+      });
     });
-    document.getElementById('cancelBooking')?.addEventListener('click', closeModal);
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
-
-  function showBillingSummary(bookingData) {
-    let subtotal = selectedServices.reduce((sum, s) => sum + s.price, 0);
-    let vat = subtotal * 0.05;
-    let total = subtotal + vat;
-    let invoiceNo = getNextInvoiceNumber();
-    let bookingId = `PY-${invoiceNo}`;
-    
-    let servicesHtml = selectedServices.map(s => `<div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #e2e8f0;"><span>${s.name}</span><span style="font-weight:600;">${s.price.toFixed(2)} AED</span></div>`).join('');
-    
-    let html = `<div class="modal-header"><h3><i class="fas fa-receipt"></i> Billing Summary</h3><span class="close-modal">&times;</span></div>
-      <div class="billing-preview">
-        <p><strong>🧾 Invoice #:</strong> ${bookingId}</p>
-        <p><strong>👤 Customer:</strong> ${bookingData.fullName}</p>
-        <p><strong>📞 WhatsApp:</strong> ${bookingData.whatsappNum}</p>
-        <p><strong>🏠 Address:</strong> ${bookingData.address}, ${bookingData.landmark}, ${bookingData.location}</p>
-        <hr style="margin:12px 0;">
-        <div style="font-weight:700; margin-bottom:8px;">Services:</div>
-        ${servicesHtml}
-        <hr style="margin:12px 0;">
-        <div style="display:flex; justify-content:space-between;"><strong>Subtotal:</strong><span>${subtotal.toFixed(2)} AED</span></div>
-        <div style="display:flex; justify-content:space-between;"><strong>VAT (5%):</strong><span>${vat.toFixed(2)} AED</span></div>
-        <div style="display:flex; justify-content:space-between; font-size:1.3rem; font-weight:800; color:var(--primary); margin-top:10px;"><strong>TOTAL:</strong><span>${total.toFixed(2)} AED</span></div>
-        <div style="display:flex; justify-content:space-between; margin-top:10px;"><strong>Payment:</strong><span>${bookingData.paymentMethod}</span></div>
-      </div>
-      <div class="modal-buttons">
-        <button class="btn-secondary" id="editDetails">Edit Details</button>
-        <button class="btn-primary" id="confirmBookingSend">Confirm & Send to WhatsApp</button>
-      </div>`;
-    showModal(html);
-    
-    document.getElementById('confirmBookingSend')?.addEventListener('click', () => {
-      sendWhatsAppBooking(bookingData, bookingId, total);
-    });
-    document.getElementById('editDetails')?.addEventListener('click', () => { closeModal(); showBookingDetailsForm(); });
-    document.querySelector('.close-modal')?.addEventListener('click', closeModal);
-  }
-
-  function sendWhatsAppBooking(bookingData, bookingId, total) {
-    let servicesText = selectedServices.map(s => `✅ ${s.name} : ${s.price.toFixed(2)} AED`).join('%0A');
-    let subtotal = selectedServices.reduce((sum, s) => sum + s.price, 0);
-    let vat = subtotal * 0.05;
-    let message = `🆕 *NEW BOOKING - PAPPU YAAR TECHNICAL CLEANING* %0A%0A` +
-                  `🧾 *Invoice: ${bookingId}* %0A` +
-                  `👤 *Customer Details:*%0A` +
-                  `Name: ${bookingData.fullName}%0A` +
-                  `WhatsApp: ${bookingData.whatsappNum}%0A` +
-                  `Calling: ${bookingData.callNum}%0A` +
-                  `🏠 *Address:* ${bookingData.address}, ${bookingData.landmark}, ${bookingData.location}%0A` +
-                  `${bookingData.specialReq ? `📝 Special Request: ${bookingData.specialReq}%0A` : ''}` +
-                  `🛠️ *Services Selected:*%0A${servicesText}%0A%0A` +
-                  `💰 *Subtotal: ${subtotal.toFixed(2)} AED*%0A` +
-                  `🧾 *VAT (5%): ${vat.toFixed(2)} AED*%0A` +
-                  `💵 *TOTAL AMOUNT: ${total.toFixed(2)} AED*%0A` +
-                  `💳 *Payment Method: ${bookingData.paymentMethod}*%0A` +
-                  `📅 *Booking Time: ${new Date().toLocaleString()}*%0A%0A` +
-                  `📍 Office: Al Wair Union Coop, 1st Floor Office No. 29%0A` +
-                  `🌐 www.pycleaners.com%0A%0A` +
-                  `🔔 *Please confirm this booking. Thank you!*`;
-    
-    window.open(`https://wa.me/971507213196?text=${message}`, '_blank');
-    alert(`✅ Booking Confirmed!\nInvoice: ${bookingId}\nTotal: ${total.toFixed(2)} AED\nWhatsApp will open with our team.`);
-    closeModal();
-    // Optionally clear cart after booking
-    if(confirm("Clear cart after booking?")) { selectedServices = []; updateCartDisplay(); }
-  }
-
-  document.getElementById('contactNavBtn')?.addEventListener('click', () => {
-    alert("📍 Al Wair Union Coop, 1st Floor Office No. 29\n📞 +971 50 721 3196\n🌐 www.pycleaners.com");
-  });
-
-  renderCategories();
-  updateCartDisplay();
-</script>
+  </script>
 </body>
 </html>
